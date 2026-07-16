@@ -1,0 +1,30 @@
+=== train.py ===
+Samples: 180 (90 phishing / 90 legit)
+Test accuracy: 1.000
+
+Classification report (class 1 = phishing):
+              precision    recall  f1-score   support
+
+       legit       1.00      1.00      1.00        23
+    phishing       1.00      1.00      1.00        22
+
+    accuracy                           1.00        45
+   macro avg       1.00      1.00      1.00        45
+weighted avg       1.00      1.00      1.00        45
+
+Confusion matrix [rows=true, cols=pred] (order: legit, phishing):
+[[23  0]
+ [ 0 22]]
+
+Top phishing-indicative terms:
+  http, example, at http, your, update, at, example to, prize, claim, verify, update billing, billing
+
+Saved model -> model.joblib
+
+=== predict.py (phishing sample) ===
+Prediction: PHISHING
+Phishing probability: 78.2%
+
+=== predict.py (legit sample) ===
+Prediction: LEGITIMATE
+Phishing probability: 18.6%
